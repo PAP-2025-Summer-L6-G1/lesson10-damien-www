@@ -151,7 +151,7 @@ function App(props) {
         body: JSON.stringify(message)
       };
 
-      const response = await fetch(apiPostNew, postNewParamsWithBody);
+       await fetch(apiPostNew, postNewParamsWithBody);
       // Practice Session
       if (message.secret === isSecret) {
         showMessages([message, ...messages]);  
@@ -175,7 +175,7 @@ function App(props) {
     try {
       const now = (new Date()).toISOString();
 
-      const response = await fetch(apiUpdateOne + messageId, {
+      await fetch(apiUpdateOne + messageId, {
         ...updateOneParams,
         body: JSON.stringify({
           message: newMessage,
@@ -193,7 +193,7 @@ function App(props) {
   }
   async function deleteMessage(messageId) {
     try {
-      const response = await fetch(apiDeleteOne + messageId, deleteOneParams);
+      await fetch(apiDeleteOne + messageId, deleteOneParams);
       // Practice Session
       const messageIndex = messages.findIndex(message => message._id === messageId);
       messages.splice(messageIndex, 1);
