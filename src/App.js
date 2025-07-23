@@ -114,7 +114,7 @@ function App(props) {
       // EXERCISES 5.2, 5.3
       
       const response = await fetch(apiLogout, postLogoutParams);
-      if(response.status == 200){
+      if(response.status === 200){
         setLoggedInUser("");
         clearLocalAccountData();
       }
