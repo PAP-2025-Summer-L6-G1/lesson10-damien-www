@@ -1,0 +1,93 @@
+.message {
+  margin: 0 0 20px 0;
+  padding: 2rem;
+  background-color: #0a2a48;
+  text-align: left;
+  border-radius: 20px;
+
+  h4, textarea {
+    color: white;
+    font-size: 1.3em;
+    font-weight: normal;
+    margin-bottom: 0;
+    padding-bottom: 30px;
+  }
+
+  textarea {
+    margin-bottom: 10px;
+    cursor: text;
+    color: #e8a324;
+    padding: 10px;
+    border: 1px dashed #e8a324;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    line-height: 1.2;
+    min-height: 1.3em;
+    resize: none;
+    overflow: hidden;
+
+    &:focus {
+      outline: none; /* Remove the default outline */
+      box-shadow: 0 0 0 2px #fff; /* White outline */
+      border-radius: 2px; /* Rounded corners */
+    }
+  }
+}
+
+.meta {
+  padding-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+  font-size: 0.95em;
+  border-top: dotted 1px #ccc;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.meta p {
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+.edit-message {
+  margin-top: -10px;
+  margin-bottom: 30px;
+  text-align: right;
+}
+
+.edit button,
+.edit-message button {
+  display: inline-block;
+  width: auto;
+  padding: 0.1ch;
+  margin: 0.3ch;
+  background: transparent;
+  border: 0;
+}
+
+
+/*============Icon color adjustments Pico v2============*/
+
+.message button svg {
+  color: #1d85bb;
+}
+
+.message button svg:hover {
+  color: var(--pico-primary-hover);
+}
+
+.message .button-confirm-edit svg {
+  color: #5ac2a6;
+}
+
+.message .button-cancel-edit svg {
+  color: #e8a324;
+}
+
+.edit .button-trash:hover svg {
+  color: #c9615d;
+}

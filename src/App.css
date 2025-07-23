@@ -1,0 +1,163 @@
+html {
+  height: 100%
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  text-align: center;
+  font-size: 100%;
+  color: white;
+  background-image: url('./winged-letter.png');
+  background-size: 95px;
+  background-repeat: repeat;
+  letter-spacing: 0.06ch;
+}
+
+#root {
+  padding: 0;
+}
+
+#root>header {
+  background-color: #0a2a48;
+  padding: 0.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  #branding>#logo,
+  #branding>#title {
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  #logo {
+    width: 100px;
+  }
+
+  #title {
+    padding: 0.7rem 1.5rem;
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5em;
+  }
+
+  button {
+    margin-left: 1rem;
+    padding: 0 2ch;
+    width: auto;
+    height: 2rem;
+    line-height: 1;
+  }
+
+  #signup-login, #avatar-logout {
+    display: flex;
+  }
+
+  #log-in-btn, #log-out-btn {
+    margin-left: 1rem;
+  }
+ 
+  #user-avatar > img{
+    height: 42px;
+    border-radius: 50%;
+    margin: 0;
+  }
+}
+
+#root>footer, #main {
+  padding-block: var(--pico-block-spacing-vertical);
+}
+
+#main {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  max-width: 1200px;
+}
+
+#show-secret {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+#main>section {
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  width: 60%;
+  max-width: 700px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+}
+
+#main>aside {
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  width: 35%;
+  max-width: 500px;
+  border-radius: 20px;
+  background-color: #0a2a48;
+  text-align: left;
+}
+
+
+/*============Icon color adjustments Pico v2============*/
+
+#form-btn {
+  margin-top: 30px;
+}
+
+/*================= Secret messages should each have a class, so they can be styled differently and shown in among the regular messages 
+.secret h4 {
+  font-style: italic;
+  color: #daa041;
+}
+=================*/
+
+/* ================== Modal styles ================== */
+
+dialog>article {
+  background-color: #0a2a48;
+  border-radius: 20px;
+}
+
+dialog>article>form {
+  padding: 2rem;
+
+  label {
+      text-align: left;
+  }
+
+  input[type="submit"] {
+      margin-top: 30px;
+  }
+}
+
+
+/* ================== Minimal responsivity ================== */
+
+@media screen and (max-width: 980px) {
+  #main {
+    flex-direction:column-reverse;
+  }
+
+  #root>header {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    #utility {
+      margin-top: 1rem;
+    }
+  }
+
+  #main>section {
+    width: 100%;
+    padding: 5%;
+  }
+  #main>aside {
+    width: 90%;
+  }
+}

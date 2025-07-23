@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Message</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+        <section id="messages">
+            <h1 id="title">Messages</h1>
+            <button id="show-secret">Show secret messages</button>
+            <div class="messages-container"></div>
+        </section>
+        <aside>
+            <h2>Send a Message</h2>
+            <form>
+                <label for="user">Your Name</label>
+                <input id="user" type="text" name="user">
+                <label for="message">Your message</label>
+                <textarea id="message" type="text" name="message"></textarea>
+                <label>Is this a secret message?</label>
+                <input type="radio" id="yes" name="secret" value="true"><label for="yes">Yes</label>
+                <input type="radio" id="no" name="secret" value="false" checked><label for="no">No</label>
+                <input type="submit" value="send" id="form-btn">
+            </form>
+        </aside>
+    </main>
+    <script src="./script.js"></script>
+</body>
+
+</html>
